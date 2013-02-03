@@ -24,7 +24,6 @@ $(function(){
 		//Stop Button for Clock
 		$("#stop_clock").click(function(){
 			window.clearInterval(clock_control);
-			console.log("");
 			//Unbind when stop is hit
 			$("#stop_clock").unbind('click');
 		});
@@ -47,11 +46,9 @@ function displayClock(id, start_time){
 	var start = new Date().getTime() - (parseInt(elapsed)*1000);
 	var clock = window.setInterval(function(){
     var time = (new Date().getTime() - start);
-    console.log(elapsed);
     elapsed = Math.floor(time / 1000);
     if(Math.round(elapsed) == elapsed) { elapsed += '.0'; }
     current_seconds = elapsed.split(".")[0];
-    console.log(current_seconds);
     document.getElementById(id).innerHTML = current_seconds.toHHMMSS();
 	}, 100);
 	return clock;
