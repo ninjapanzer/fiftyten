@@ -15,7 +15,12 @@ String.prototype.toHHMMSS = function () {
     var time    = hours+':'+minutes+':'+seconds;
     return time;
 }
+//Initializer
+$(function(){
+	document.getElementById("clock").innerHTML = (current_seconds+"").toHHMMSS();
+});
 
+//Clock Buttons
 $(function(){
 	//Start Button for Clock
 	$("#start_clock").click(function(){
