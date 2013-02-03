@@ -12,7 +12,7 @@
   <title>Welcome to Foundation | Feed</title>
 
   <!-- Included CSS Files -->
-  <%= stylesheet_link_tag    "application" %>
+  <%= stylesheet_link_tag "application" %>
   
   <!--<link rel="stylesheet" href="../stylesheets/templates.css">-->
 
@@ -31,6 +31,16 @@
 
   <!-- End Header and Nav -->
 
+  <div class="row">
+    <div class="twelve columns">
+      <div id="clock" class="clock">0.0</div>
+      <ul class="button-group radius">
+        <li id="start_clock" class="button radius">Start</li>
+        <li id="stop_clock" class="button radius">Stop</li>
+        <li id="clear_clock" class="button radius">Reset</li>
+      </ul>
+    </div>
+  </div>
   <%= yield %>
   <div class="row">
 
