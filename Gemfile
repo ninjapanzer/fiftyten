@@ -32,6 +32,7 @@ gem 'bcrypt-ruby', '~> 3.0.0'
 group :test, :development do
 	gem 'sqlite3'
   gem "rspec-rails", "~> 2.0"
+  gem 'jasmine-rails'
 end
 
 # To use Jbuilder templates for JSON
